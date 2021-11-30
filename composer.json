@@ -1,5 +1,0 @@
-{
-    "require": {
-        "transip/transip-api-php": "^6.11"
-    }
-}
