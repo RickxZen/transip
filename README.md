@@ -7,7 +7,9 @@ TransIP is my domain host and has an extensive API available to manage a domain.
 - To create an API key in TransIP use this link: https://www.transip.nl/cp/account/api/
 
 ## Usage
-Copy the files and place them on your server. In the checkwan script fill parameters for your account and domain. Change the ### on line 5 to your domain, change the ### on line 8 to your TransIP username and paste ur private key on line 11.
+Follow instructions from: https://github.com/transip/transip-api-php#composer
+
+In the checkwan script fill parameters for your account and domain. Change the 'domain.tld' on line 11 to your domain, change the 'username' on line 10 to your TransIP username and paste ur private key on line 18.
 
 ## Cron job
 Using a cronjob I perform this script hourly on my QNAP NAS. 
