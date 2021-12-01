@@ -47,13 +47,13 @@ foreach($dnsEntries as $dnsEntry){
   array_push($newDnsEntries, $dnsEntry);
   if (($dnsEntry->getType() == 'A') && $dnsEntry->getContent() != $ipAddress){
     //Set new external IP address on record
-	  $dnsEntry->setContent($ipAddress);
+    $dnsEntry->setContent($ipAddress);
     //Update record with new external IP address
-	  $api->domainDns()->updateEntry($domainName, $dnsEntry);
+    $api->domainDns()->updateEntry($domainName, $dnsEntry);
     echo "Record changed"." \r\n";
-  	//Logging
-  	$time = date('Y-m-d H:i:s', time());
-  	file_put_contents("logging.txt", "". $time ." - !!UPDATE PERFORMED!! --> New IP: ". $ipAddress ." \r\n", FILE_APPEND);
+    //Logging
+    $time = date('Y-m-d H:i:s', time());
+    file_put_contents("logging.txt", "". $time ." - !!UPDATE PERFORMED!! --> New IP: ". $ipAddress ." \r\n", FILE_APPEND);
   }
 }
 ?>
